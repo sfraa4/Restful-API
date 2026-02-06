@@ -8,3 +8,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::apiResource('/scores', App\Http\Controllers\Api\scoreController::class);
+Route::post('/register', App\Http\Controllers\Api\RegisterController::class);
+Route::post('/login', App\Http\Controllers\Api\LoginController::class);
