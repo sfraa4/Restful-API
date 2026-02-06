@@ -15,7 +15,7 @@ class ScoreController extends Controller
     {
         $data = score::all();
         //return $data ;
-        return $data -> toJson();
+        return view('index', compact('data'));
     }
 
     /**
