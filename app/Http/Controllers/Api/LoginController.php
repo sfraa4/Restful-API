@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
@@ -21,7 +21,7 @@ class LoginController extends Controller
 
         $credentials = $request->only('email', 'password');
 
-        if(!$token = auth()->guard('api')->attempt($credentials));{
+        if(!$token = auth()->guard('api')->attempt($credentials)){
             return response()->json([
                 'success' => false,
                 'message' => 'user atau pw salah'

@@ -15,7 +15,7 @@ class scoreResource extends JsonResource
     {;
         $this->status = $status;
         $this->message = $message;
-        return parent:: __construct($resource);
+        parent:: __construct($resource);
     }
 
     /**
